@@ -15,6 +15,7 @@ namespace Final_Project
         public Form1()
         {
             InitializeComponent();
+            button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
         }
 
         private void button1_Click(object sender, EventArgs e)
