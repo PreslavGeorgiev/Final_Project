@@ -10,17 +10,19 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
-            button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
-
+            MainForm mainForm = new MainForm();
+            this.Hide();
+            mainForm.ShowDialog();
+            this.Close();
         }
     }
 }
