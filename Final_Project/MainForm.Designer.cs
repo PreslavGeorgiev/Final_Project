@@ -65,7 +65,7 @@
             this.AccountIcon = new System.Windows.Forms.PictureBox();
             this.ShoppingCartIcon = new System.Windows.Forms.PictureBox();
             this.LogoBox = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Group = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -402,14 +402,13 @@
             this.LogoBox.TabIndex = 45;
             this.LogoBox.TabStop = false;
             // 
-            // groupBox1
+            // Group
             // 
-            this.groupBox1.Location = new System.Drawing.Point(12, 71);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 313);
-            this.groupBox1.TabIndex = 46;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.Group.Location = new System.Drawing.Point(12, 71);
+            this.Group.Name = "Group";
+            this.Group.Size = new System.Drawing.Size(776, 313);
+            this.Group.TabIndex = 46;
+            this.Group.TabStop = false;
             // 
             // MainForm
             // 
@@ -453,7 +452,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Group);
             this.Name = "MainForm";
             this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -518,6 +517,6 @@
         private System.Windows.Forms.PictureBox AccountIcon;
         private System.Windows.Forms.PictureBox ShoppingCartIcon;
         private System.Windows.Forms.PictureBox LogoBox;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Group;
     }
 }

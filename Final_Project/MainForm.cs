@@ -21,5 +21,20 @@ namespace Final_Project
         {
 
         }
+
+        private void setProducts(int page)
+        {
+            foreach (Control c in Group.Controls)
+            {
+                if (c.GetType() == typeof(TextBox))
+                {
+                    Console.WriteLine("ii");
+                }
+                else if (c.GetType() == typeof(PictureBox))
+                {
+                    Console.WriteLine("iii");
+                }
+            }
+        }
     }
 }
