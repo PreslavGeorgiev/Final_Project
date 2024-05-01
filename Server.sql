@@ -1,4 +1,4 @@
-  
+
 Create table product_category (
     id int primary key,
     product_name varchar(255),
@@ -14,6 +14,17 @@ Create table accountdetails (
     contact_id int,
     adress_id int
 );
+
+Create table Users (
+	UserID INT IDENTITY PRIMARY KEY NOT NULL,
+	FirstName VARCHAR(255),
+	LastName VARCHAR(255),
+	Username VARCHAR(255),
+	[Password] VARCHAR(MAX),
+	[Address] VARCHAR(255),
+	Phone VARCHAR(255),
+	[Date] DATETIME
+)
 
 Create Table product_inventory (
     product_id int,
