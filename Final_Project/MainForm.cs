@@ -51,30 +51,33 @@ namespace Final_Project
                 int skips;
                 Image image;
                 MemoryStream ms;
+                skips = (page - 1) * slots.Count;
+
                 while (reader.Read()) {
                     if (toFill >= slots.Count)
                     {
                         break;
                     }
 
-                    skips = (page - 1) * slots.Count;
                     if (toFill < skips)
                     {
+                        skips--;
+                    }
+                    else
+                    {
+                        string tb = reader[1].ToString() + "\n\nPrice: " + reader[0].ToString();
+                        slots[toFill].Item1.Text = tb;
+
+                        byte[] imageBytes = (byte[])reader[2];
+                        using (ms = new MemoryStream(imageBytes))
+                        {
+                            image = Image.FromStream(ms);
+                            slots[toFill].Item2.SizeMode = PictureBoxSizeMode.StretchImage;
+                            slots[toFill].Item2.Image = image;
+                        }
+
                         toFill++;
                     }
-
-                    string tb = reader[1].ToString() + "\n\nPrice: " + reader[0].ToString();
-                    slots[toFill].Item1.Text = tb;
-
-                    byte[] imageBytes = (byte[])reader[2];
-                    using (ms = new MemoryStream(imageBytes))
-                    {
-                        image = Image.FromStream(ms);
-                        slots[toFill].Item2.SizeMode = PictureBoxSizeMode.StretchImage;
-                        slots[toFill].Item2.Image = image;
-                    }
-
-                    toFill++;
                 }
                 reader.Close();
             }
