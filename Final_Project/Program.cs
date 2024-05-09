@@ -17,7 +17,7 @@ namespace Final_Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new RegisterForm());
-            Application.Run(new MainForm());
+            Application.Run(new MainForm("uuu"));
 
         }
     }

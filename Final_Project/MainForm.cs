@@ -19,11 +19,13 @@ namespace Final_Project
         int page = 1;
         string lastQuery;
         string userName;
+        Dictionary<int, int> dict1 = new Dictionary<int, int>();
+
 
         public MainForm(string username)
         {
             InitializeComponent();
-            string query = "SELECT price, productName, mainPhoto FROM product_inventory";
+            string query = "SELECT price, productName, mainPhoto, product_id FROM product_inventory";
             lastQuery = query;
             setProducts(query);
             userName = username;
@@ -31,7 +33,7 @@ namespace Final_Project
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string query = String.Format("SELECT price, productName, mainPhoto FROM product_inventory WHERE productName LIKE '{0}%'", SearchBox.Text);
+            string query = String.Format("SELECT price, productName, mainPhoto, product_id FROM product_inventory WHERE productName LIKE '{0}%'", SearchBox.Text);
             lastQuery = query;
             setProducts(query);
         }
@@ -69,16 +71,17 @@ namespace Final_Project
                     {
                         string tb = reader[1].ToString() + "\n\nPrice: " + reader[0].ToString();
                         slots[toFill].Item1.Text = tb;
-
+                        int tmp = -1;
                         byte[] imageBytes = (byte[])reader[2];
                         using (ms = new MemoryStream(imageBytes))
                         {
                             image = Image.FromStream(ms);
                             slots[toFill].Item2.SizeMode = PictureBoxSizeMode.StretchImage;
                             slots[toFill].Item2.Image = image;
+                            tmp = (int)reader[3];
                         }
 
-                        //slots[toFill].Item3 = reader[1].ToString();
+                        dict1.Add(slots[toFill].Item3, tmp);
 
                         toFill++;
                     }
@@ -148,14 +151,14 @@ namespace Final_Project
             //    }
             //}
 
-            dict.Add(new Tuple<Label, PictureBox, int>(label10, pictureBox4, -1));
-            dict.Add(new Tuple<Label, PictureBox, int>(label4, pictureBox3, -1));
-            dict.Add(new Tuple<Label, PictureBox, int>(label2, pictureBox1, -1));
-            dict.Add(new Tuple<Label, PictureBox, int>(label6, pictureBox2, -1));
-            dict.Add(new Tuple<Label, PictureBox, int>(label8, pictureBox5, -1));
-            dict.Add(new Tuple<Label, PictureBox, int>(label14, pictureBox7, -1));
-            dict.Add(new Tuple<Label, PictureBox, int>(label16, pictureBox8, -1));
-            dict.Add(new Tuple<Label, PictureBox, int>(label12, pictureBox6, -1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label10, pictureBox4, 0));
+            dict.Add(new Tuple<Label, PictureBox, int>(label4, pictureBox3, 1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label2, pictureBox1, 2));
+            dict.Add(new Tuple<Label, PictureBox, int>(label6, pictureBox2, 3));
+            dict.Add(new Tuple<Label, PictureBox, int>(label8, pictureBox5, 4));
+            dict.Add(new Tuple<Label, PictureBox, int>(label14, pictureBox7, 5));
+            dict.Add(new Tuple<Label, PictureBox, int>(label16, pictureBox8, 6));
+            dict.Add(new Tuple<Label, PictureBox, int>(label12, pictureBox6, 7));
 
 
             return dict;
@@ -168,7 +171,7 @@ namespace Final_Project
 
         private void ShoppingCartButton_Click(object sender, EventArgs e)
         {
-            Application.Run(new OrderMenu_Form4(userName));
+            //Application.Run(new OrderMenu_Form4(userName));
         }
 
         private void Group_Enter(object sender, EventArgs e)
@@ -198,41 +201,48 @@ namespace Final_Project
 
         private void groupBox4_Enter(object sender, EventArgs e)
         {
-
+            Application.Run(new Form1(dict1[0]));
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
+            Application.Run(new Form1(dict1[1]));
 
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+            Application.Run(new Form1(dict1[2]));
 
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
+            Application.Run(new Form1(dict1[3]));
 
         }
 
         private void groupBox5_Enter(object sender, EventArgs e)
         {
+            Application.Run(new Form1(dict1[4]));
 
         }
 
         private void groupBox7_Enter(object sender, EventArgs e)
         {
+            Application.Run(new Form1(dict1[5]));
 
         }
 
         private void groupBox8_Enter(object sender, EventArgs e)
         {
+            Application.Run(new Form1(dict1[6]));
 
         }
 
         private void groupBox6_Enter(object sender, EventArgs e)
         {
+            Application.Run(new Form1(dict1[7]));
 
         }
     }
