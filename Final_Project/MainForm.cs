@@ -18,13 +18,15 @@ namespace Final_Project
         string con = "Data Source=MARTINADEF\\SQLEXPRESS;Initial Catalog=db2;Integrated Security=True;Encrypt=False";
         int page = 1;
         string lastQuery;
+        string userName;
 
-        public MainForm()
+        public MainForm(string username)
         {
             InitializeComponent();
             string query = "SELECT price, productName, mainPhoto FROM product_inventory";
             lastQuery = query;
             setProducts(query);
+            userName = username;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -76,6 +78,8 @@ namespace Final_Project
                             slots[toFill].Item2.Image = image;
                         }
 
+                        //slots[toFill].Item3 = reader[1].ToString();
+
                         toFill++;
                     }
                 }
@@ -118,9 +122,9 @@ namespace Final_Project
             }
         }
 
-        private List<Tuple<Label, PictureBox>> getProductSlots()
+        private List<Tuple<Label, PictureBox, int>> getProductSlots()
         {
-            var dict = new List<Tuple<Label, PictureBox>>();
+            var dict = new List<Tuple<Label, PictureBox, int>>();
             //var t = new Label();
             //var p = new PictureBox();
 
@@ -144,14 +148,14 @@ namespace Final_Project
             //    }
             //}
 
-            dict.Add(new Tuple<Label, PictureBox>(label10, pictureBox4));
-            dict.Add(new Tuple<Label, PictureBox>(label4, pictureBox3));
-            dict.Add(new Tuple<Label, PictureBox>(label2, pictureBox1));
-            dict.Add(new Tuple<Label, PictureBox>(label6, pictureBox2));
-            dict.Add(new Tuple<Label, PictureBox>(label8, pictureBox5));
-            dict.Add(new Tuple<Label, PictureBox>(label14, pictureBox7));
-            dict.Add(new Tuple<Label, PictureBox>(label16, pictureBox8));
-            dict.Add(new Tuple<Label, PictureBox>(label12, pictureBox6));
+            dict.Add(new Tuple<Label, PictureBox, int>(label10, pictureBox4, -1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label4, pictureBox3, -1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label2, pictureBox1, -1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label6, pictureBox2, -1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label8, pictureBox5, -1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label14, pictureBox7, -1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label16, pictureBox8, -1));
+            dict.Add(new Tuple<Label, PictureBox, int>(label12, pictureBox6, -1));
 
 
             return dict;
@@ -164,7 +168,7 @@ namespace Final_Project
 
         private void ShoppingCartButton_Click(object sender, EventArgs e)
         {
-            //Application.Run(new ShoppingCartForm());
+            Application.Run(new OrderMenu_Form4(userName));
         }
 
         private void Group_Enter(object sender, EventArgs e)
@@ -190,6 +194,46 @@ namespace Final_Project
                 page = maxPage(lastQuery);
             }
             setProducts(lastQuery);
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox8_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

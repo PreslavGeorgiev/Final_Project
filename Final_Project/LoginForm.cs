@@ -14,8 +14,10 @@ namespace Final_Project
 {
     public partial class LoginForm : Form
     {
+        string username;
         public LoginForm()
         {
+            username = txtUsername2.Text;
             InitializeComponent();
         }
 
@@ -32,7 +34,7 @@ namespace Final_Project
 
             if (count == 1)
             {
-                MainForm mainForm = new MainForm();
+                MainForm mainForm = new MainForm(username);
                 mainForm.Show();
                 return;
             }
