@@ -199,51 +199,51 @@ namespace Final_Project
             setProducts(lastQuery);
         }
 
-        //private void pictureBox4_Click(object sender, EventArgs e)
-        //{
-        //    Application.Run(new Form1(dict1[0]));
-        //}
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Form1(dict1[0]));
+        }
 
-        //private void pictureBox3_Click(object sender, EventArgs e)
-        //{
-        //    Application.Run(new Form1(dict1[1]));
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Form1(dict1[1]));
 
-        //}
+        }
 
-        //private void pictureBox1_Click(object sender, EventArgs e)
-        //{
-        //    Application.Run(new Form1(dict1[2]));
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Form1(dict1[2]));
 
-        //}
+        }
 
-        //private void pictureBox2_Click(object sender, EventArgs e)
-        //{
-        //    Application.Run(new Form1(dict1[3]));
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Form1(dict1[3]));
 
-        //}
+        }
 
-        //private void pictureBox5_Click(object sender, EventArgs e)
-        //{
-        //    Application.Run(new Form1(dict1[4]));
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Form1(dict1[4]));
 
-        //}
+        }
 
-        //private void pictureBox7_Click(object sender, EventArgs e)
-        //{
-        //    Application.Run(new Form1(dict1[5]));
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Form1(dict1[5]));
 
-        //}
+        }
 
-        //private void pictureBox8_Click(object sender, EventArgs e)
-        //{
-        //    Application.Run(new Form1(dict1[6]));
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Form1(dict1[6]));
 
-        //}
+        }
 
-        //private void pictureBox6_Click(object sender, EventArgs e)
-        //{
-        //    Application.Run(new Form1(dict1[7]));
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Form1(dict1[7]));
 
-        //}
+        }
     }
 }
