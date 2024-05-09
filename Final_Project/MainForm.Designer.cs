@@ -140,7 +140,6 @@
             this.groupBox1.Size = new System.Drawing.Size(274, 450);
             this.groupBox1.TabIndex = 70;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -171,6 +170,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(220, 223);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox3
             // 
@@ -185,7 +185,6 @@
             this.groupBox3.Size = new System.Drawing.Size(274, 450);
             this.groupBox3.TabIndex = 71;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label3
             // 
@@ -216,6 +215,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(220, 223);
             this.pictureBox3.TabIndex = 32;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // groupBox2
             // 
@@ -230,7 +230,6 @@
             this.groupBox2.Size = new System.Drawing.Size(274, 450);
             this.groupBox2.TabIndex = 73;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label5
             // 
@@ -261,6 +260,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(220, 223);
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // groupBox8
             // 
@@ -275,7 +275,6 @@
             this.groupBox8.Size = new System.Drawing.Size(274, 459);
             this.groupBox8.TabIndex = 74;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
             // 
             // label15
             // 
@@ -306,6 +305,7 @@
             this.pictureBox8.Size = new System.Drawing.Size(220, 223);
             this.pictureBox8.TabIndex = 32;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // groupBox7
             // 
@@ -320,7 +320,6 @@
             this.groupBox7.Size = new System.Drawing.Size(274, 459);
             this.groupBox7.TabIndex = 75;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // label13
             // 
@@ -351,6 +350,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(220, 223);
             this.pictureBox7.TabIndex = 32;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // groupBox6
             // 
@@ -365,7 +365,6 @@
             this.groupBox6.Size = new System.Drawing.Size(274, 459);
             this.groupBox6.TabIndex = 76;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // label11
             // 
@@ -396,6 +395,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(220, 223);
             this.pictureBox6.TabIndex = 32;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // groupBox4
             // 
@@ -410,7 +410,6 @@
             this.groupBox4.Size = new System.Drawing.Size(274, 450);
             this.groupBox4.TabIndex = 77;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // label9
             // 
@@ -441,6 +440,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(220, 223);
             this.pictureBox4.TabIndex = 32;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // groupBox5
             // 
@@ -455,7 +455,6 @@
             this.groupBox5.Size = new System.Drawing.Size(274, 459);
             this.groupBox5.TabIndex = 78;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // label7
             // 
@@ -486,6 +485,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(220, 223);
             this.pictureBox5.TabIndex = 32;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // PageCounter
             // 

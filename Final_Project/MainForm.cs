@@ -199,48 +199,48 @@ namespace Final_Project
             setProducts(lastQuery);
         }
 
-        private void groupBox4_Enter(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
             Application.Run(new Form1(dict1[0]));
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             Application.Run(new Form1(dict1[1]));
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Run(new Form1(dict1[2]));
 
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Run(new Form1(dict1[3]));
 
         }
 
-        private void groupBox5_Enter(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
             Application.Run(new Form1(dict1[4]));
 
         }
 
-        private void groupBox7_Enter(object sender, EventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
             Application.Run(new Form1(dict1[5]));
 
         }
 
-        private void groupBox8_Enter(object sender, EventArgs e)
+        private void pictureBox8_Click(object sender, EventArgs e)
         {
             Application.Run(new Form1(dict1[6]));
 
         }
 
-        private void groupBox6_Enter(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
             Application.Run(new Form1(dict1[7]));
 
